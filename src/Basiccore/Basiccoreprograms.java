@@ -7,7 +7,9 @@ public class Basiccoreprograms {
 	   Basiccoreprograms rv1 = new Basiccoreprograms();
 	    rv1.flipcoin();
 	   Basiccoreprograms rv2 = new Basiccoreprograms();
-	    rv1.leapyear();
+	    rv2.leapyear();
+	    Basiccoreprograms rv3 = new Basiccoreprograms();
+	    rv3.power_of_2();
 	}
 
 	void flipcoin() {
@@ -41,13 +43,29 @@ public class Basiccoreprograms {
 		System.out.println("Enter the year");
 		 year = user_input_second.nextInt();
 		
-		  if ((year%4 == 0 && year%100 != 0) || (year%400 ==0 )) {
+		  if ((year%4 == 0 && year%100 != 0) || (year%400 == 0 )) {
 		     System.out.println("Specified year is a leap year");
 		  }
 	      else
 	      {
 	         System.out.println("Specified year is not a leap year");
 	      }
+	}
+	
+	void power_of_2() {
+		int power;
+		int value = 1;
+		Scanner user_input_third = new Scanner(System.in);
+		System.out.println("Enter the power value");
+		power = user_input_third.nextInt();
+		
+		System.out.println("2^"+0+" = "+1);
+		
+		for (int i=1; i<=power;i++) {
+			 value = (2*value);
+			 System.out.println("2^"+i+" = "+value);
+		}
+		
 	}
 		
 }
